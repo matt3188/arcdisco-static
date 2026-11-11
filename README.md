@@ -1,21 +1,44 @@
-# A.R.C. Disco static website
+# A.R.C. Disco — Nuxt website
 
-The dist directory is a standalone static website. It contains 13 pages with the existing URL paths, original branding, text, photographs and locally hosted fonts. No installation, database, PHP, WordPress, jQuery, plugins or build step is required.
+The existing A.R.C. Disco site rebuilt with Nuxt 4. All 13 pages are generated as static HTML for GitHub Pages, with local images and fonts.
 
-## Hosting
+## Update the website
 
-Upload the contents of dist to the document root of a static web host. Enable HTTPS and directory index.html handling. Keep the existing domain and paths to retain incoming links. A private review copy is separately hosted through Sites; that does not change arcdisco.co.uk.
+1. Open `content/pages/` in GitHub and choose the page you want to change (`home.html` is the homepage).
+2. Click the pencil icon. Change the wording between the HTML tags, keeping the tags in place.
+3. Commit your change to `main`. GitHub Actions automatically rebuilds and publishes the site.
 
-Before changing production, back up the current site and DNS configuration. Once the static copy is approved and tested on the intended host, replace the old document root rather than uploading over WordPress. Remove PHP execution, the WordPress installation and database when no longer needed, and rotate hosting, FTP/SFTP, administrator and email credentials through the provider. Static files remove the WordPress/plugin attack surface but hosting and domain accounts still require protection. Preserve existing mail DNS records when changing web hosting.
+Page titles and search descriptions are in `content/pages.json`. The menu, phone number and shared footer are in `app/components/SiteNavigation.vue`. Colours and styles are in `public/assets/site.css`. Images and fonts are in `public/assets/`.
+
+Internal links in content should start with `/` (for example `/contact/` or `/assets/photo.jpg`). Nuxt adds the GitHub Pages project prefix automatically.
+
+## Local development
+
+Use Node.js 24:
+
+```sh
+npm ci
+npm run dev
+```
+
+Open the local URL shown in the terminal, including `/arcdisco-static/`.
+
+```sh
+npm run generate
+```
+
+The generated website is in `.output/public`. `NUXT_APP_BASE_URL` changes the hosting prefix; it defaults to `/arcdisco-static/`.
+
+## Deployment
+
+Live site: https://matt3188.github.io/arcdisco-static/
+
+The workflow in `.github/workflows/deploy.yml` builds and deploys on every push to `main`. GitHub repository Settings → Pages must use **GitHub Actions** as the source. This does not change the existing arcdisco.co.uk website or DNS.
 
 ## Enquiries
 
-Both enquiry forms validate fields in the browser and open a prefilled email addressed to info@arcdisco.co.uk. The visitor must send it through their email app. This is stated beside each form. There is no server-side email service and no success message claiming delivery. Telephone and email links work directly. For delivery without an email app, configure a separate form service before launch.
+The contact and photo booth enquiry forms validate fields and open a prefilled email to info@arcdisco.co.uk. Visitors must send that email through their own email app. GitHub Pages cannot run a server-side email service.
 
-## Editing
+## Browser checks
 
-Edit the HTML in dist, CSS in dist/assets/site.css and JavaScript in dist/assets/site.js. Images and fonts are local assets. The gallery uses native HTML dialog controls and the menu uses a small script. Original text and terms are retained; review time-sensitive insurance/accreditation and legal claims before launch.
-
-## Migration and verification
-
-Copied the 13 business pages in the original page sitemap. Blog, author, tag and attachment archives are excluded. Two unavailable third-party badge images were removed. No third-party runtime assets or WordPress endpoints remain. All local page/asset links and CSS asset references were checked, and JavaScript syntax validation passed. Browser visual/interaction testing was unavailable because this session does not expose the supported browser-control tool.
+After generating, serve `.output/public` at `http://127.0.0.1:4173/arcdisco-static/`, install Chromium with `npx playwright install chromium`, and run `npm run test:e2e`. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` to use an existing Chromium binary. The tests cover all pages and asset requests, mobile navigation, gallery controls and form validation.

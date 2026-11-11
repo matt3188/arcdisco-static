@@ -1,0 +1,80 @@
+[
+  {
+    "path": "/contact/",
+    "file": "contact",
+    "title": "Contact Us | Request a No Obligation Quote | A.R.C. Disco",
+    "description": "Just fill out the contact us form and submit it today for a free no obligation quote. We will get back to you with a quote as soon as possible."
+  },
+  {
+    "path": "/faqs/",
+    "file": "faqs",
+    "title": "FAQ's | A.R.C. Disco",
+    "description": "Do you have some questions? We have compiled a list of some of the regular questions we have been asked. Have a look at our FAQ's Page."
+  },
+  {
+    "path": "/functions/",
+    "file": "functions",
+    "title": "Why Should You Choose Us For Your Party or Disco? | A.R.C. Disco",
+    "description": "We are a small local mobile disco based in Bishop's Stortford, Hertfordshire. To us all our clients are special and we provide Disco, Music and Lights for all Occasions."
+  },
+  {
+    "path": "/functions/mood-lighting/",
+    "file": "functions/mood-lighting",
+    "title": "Mood Lighting | Uplighting | A.R.C. Disco Bishops Stortford",
+    "description": "We can install L.E.D Mood lighting for your party, to give your venue walls a splash of colour. Great for highlighting features and walls for weddings and parties. Request a quote today."
+  },
+  {
+    "path": "/functions/parties/",
+    "file": "functions/parties",
+    "title": "Party Nights | Birthday Parties & Anniversaries | A.R.C. Disco",
+    "description": "We can provide mobile disco services for birthday parties, anniversaries, retirement parties, leaving parties, children’s parties, dedicated decade nights and more. Request a quote today."
+  },
+  {
+    "path": "/functions/professional-photo-booth-hire/",
+    "file": "functions/professional-photo-booth-hire",
+    "title": "Photo Booth Hire - A.R.C Disco",
+    "description": "Professional photo booth hire and packages for parties, weddings and events. Request a quote from A.R.C Disco today!"
+  },
+  {
+    "path": "/functions/weddings/",
+    "file": "functions/weddings",
+    "title": "Wedding Disco & Entertainment | Wedding Lighting | A.R.C. Disco",
+    "description": "We aim to provide a professional, dependable and personal service for your special day. Giving you the opportunity to have your wedding day entertainment the way you want it. Request a quote today."
+  },
+  {
+    "path": "/gallery/",
+    "file": "gallery",
+    "title": "A.R.C. Mobile Disco Picture Gallery see some of our parties",
+    "description": "See pictures of some of the weddings & parties we have supplied Mobile Disco for from different venues over the past few years"
+  },
+  {
+    "path": "/",
+    "file": "home",
+    "title": "A.R.C. Disco | Mobile Disco & DJ Hire | Wedding DJ | Bishops Stortford",
+    "description": "Mobile Disco & Wedding DJ based in Bishop's Stortford. Providing you with a quality disco at prices that don’t break the bank for your wedding, party or event. Request a quote today."
+  },
+  {
+    "path": "/photo-booth-enquiry/",
+    "file": "photo-booth-enquiry",
+    "title": "Photo Booth Enquiry - A.R.C Disco",
+    "description": ""
+  },
+  {
+    "path": "/services/",
+    "file": "services",
+    "title": "Our Services | Mobile Disco Services | A.R.C Disco",
+    "description": "Mobile disco services for your event including background music while you eat, early set up and lighting. Our venue lighting services can transform your venue. Request a quote today."
+  },
+  {
+    "path": "/terms-conditions/",
+    "file": "terms-conditions",
+    "title": "Terms & Conditions - A.R.C Disco",
+    "description": ""
+  },
+  {
+    "path": "/testimonials/",
+    "file": "testimonials",
+    "title": "A.R.C. Disco Testimonials",
+    "description": "It's always nice when people say Thank you. Here are just a few Testimonials from last few years"
+  }
+]
